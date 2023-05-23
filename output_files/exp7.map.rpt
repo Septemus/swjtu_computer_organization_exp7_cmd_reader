@@ -1,5 +1,5 @@
 Analysis & Synthesis report for exp7
-Sun May 21 16:56:38 2023
+Tue May 23 10:33:34 2023
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Full Version
 
 
@@ -15,13 +15,12 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Full Version
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis RAM Summary
   9. General Register Statistics
- 10. Inverted Register Statistics
- 11. Multiplexer Restructuring Statistics (Restructuring Performed)
- 12. Source assignments for LPM_ROM:inst|altrom:srom|altsyncram:rom_block|altsyncram_luv:auto_generated
- 13. Parameter Settings for User Entity Instance: LPM_ROM:inst
- 14. Elapsed Time Per Partition
- 15. Analysis & Synthesis Messages
- 16. Analysis & Synthesis Suppressed Messages
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Source assignments for LPM_ROM:inst|altrom:srom|altsyncram:rom_block|altsyncram_luv:auto_generated
+ 12. Parameter Settings for User Entity Instance: LPM_ROM:inst
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
+ 15. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -47,16 +46,16 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun May 21 16:56:38 2023       ;
+; Analysis & Synthesis Status        ; Successful - Tue May 23 10:33:34 2023       ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Full Version ;
 ; Revision Name                      ; exp7                                        ;
 ; Top-level Entity Name              ; exp7                                        ;
 ; Family                             ; Cyclone III                                 ;
-; Total logic elements               ; 205                                         ;
-;     Total combinational functions  ; 205                                         ;
-;     Dedicated logic registers      ; 98                                          ;
-; Total registers                    ; 98                                          ;
-; Total pins                         ; 48                                          ;
+; Total logic elements               ; 52                                          ;
+;     Total combinational functions  ; 52                                          ;
+;     Dedicated logic registers      ; 40                                          ;
+; Total registers                    ; 40                                          ;
+; Total pins                         ; 36                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 4,096                                       ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -177,8 +176,6 @@ applicable agreement for further details.
 ; mem.mif                          ; yes             ; User Memory Initialization File    ; C:/Computer_Organization/exp7/mem.mif                                ;         ;
 ; pc_function.v                    ; yes             ; User Verilog HDL File              ; C:/Computer_Organization/exp7/pc_function.v                          ;         ;
 ; count_second.v                   ; yes             ; User Verilog HDL File              ; C:/Computer_Organization/exp7/count_second.v                         ;         ;
-; segment_displays.v               ; yes             ; User Verilog HDL File              ; C:/Computer_Organization/exp7/segment_displays.v                     ;         ;
-; output_files/keymodule.v         ; yes             ; User Verilog HDL File              ; C:/Computer_Organization/exp7/output_files/keymodule.v               ;         ;
 ; lpm_rom.tdf                      ; yes             ; Megafunction                       ; c:/altera/13.1/quartus/libraries/megafunctions/lpm_rom.tdf           ;         ;
 ; altrom.inc                       ; yes             ; Megafunction                       ; c:/altera/13.1/quartus/libraries/megafunctions/altrom.inc            ;         ;
 ; aglobal131.inc                   ; yes             ; Megafunction                       ; c:/altera/13.1/quartus/libraries/megafunctions/aglobal131.inc        ;         ;
@@ -201,29 +198,29 @@ applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 205       ;
+; Estimated Total logic elements              ; 52        ;
 ;                                             ;           ;
-; Total combinational functions               ; 205       ;
+; Total combinational functions               ; 52        ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 59        ;
-;     -- 3 input functions                    ; 60        ;
-;     -- <=2 input functions                  ; 86        ;
+;     -- 4 input functions                    ; 11        ;
+;     -- 3 input functions                    ; 7         ;
+;     -- <=2 input functions                  ; 34        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 136       ;
-;     -- arithmetic mode                      ; 69        ;
+;     -- normal mode                          ; 14        ;
+;     -- arithmetic mode                      ; 38        ;
 ;                                             ;           ;
-; Total registers                             ; 98        ;
-;     -- Dedicated logic registers            ; 98        ;
+; Total registers                             ; 40        ;
+;     -- Dedicated logic registers            ; 40        ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
-; I/O pins                                    ; 48        ;
+; I/O pins                                    ; 36        ;
 ; Total memory bits                           ; 4096      ;
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 114       ;
-; Total fan-out                               ; 1104      ;
-; Average fan-out                             ; 2.66      ;
+; Maximum fan-out                             ; 56        ;
+; Total fan-out                               ; 448       ;
+; Average fan-out                             ; 2.49      ;
 +---------------------------------------------+-----------+
 
 
@@ -232,15 +229,13 @@ applicable agreement for further details.
 +---------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                  ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                               ; Library Name ;
 +---------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------+--------------+
-; |exp7                                       ; 205 (0)           ; 98 (0)       ; 4096        ; 0            ; 0       ; 0         ; 48   ; 0            ; |exp7                                                                             ; work         ;
-;    |keymodule:inst3|                        ; 118 (118)         ; 51 (51)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |exp7|keymodule:inst3                                                             ; work         ;
+; |exp7                                       ; 52 (0)            ; 40 (0)       ; 4096        ; 0            ; 0       ; 0         ; 36   ; 0            ; |exp7                                                                             ; work         ;
 ;    |lpm_rom:inst|                           ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |exp7|lpm_rom:inst                                                                ; work         ;
 ;       |altrom:srom|                         ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |exp7|lpm_rom:inst|altrom:srom                                                    ; work         ;
 ;          |altsyncram:rom_block|             ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |exp7|lpm_rom:inst|altrom:srom|altsyncram:rom_block                               ; work         ;
 ;             |altsyncram_luv:auto_generated| ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |exp7|lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_luv:auto_generated ; work         ;
-;    |pc_function:inst1|                      ; 61 (11)           ; 40 (8)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |exp7|pc_function:inst1                                                           ; work         ;
-;       |count_second:cs|                     ; 50 (50)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |exp7|pc_function:inst1|count_second:cs                                           ; work         ;
-;    |segment_displays:inst2|                 ; 26 (26)           ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |exp7|segment_displays:inst2                                                      ; work         ;
+;    |pc_function:inst1|                      ; 52 (9)            ; 40 (8)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |exp7|pc_function:inst1                                                           ; work         ;
+;       |count_second:cs|                     ; 43 (43)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |exp7|pc_function:inst1|count_second:cs                                           ; work         ;
 +---------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -259,38 +254,23 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 98    ;
-; Number of registers using Synchronous Clear  ; 4     ;
-; Number of registers using Synchronous Load   ; 12    ;
+; Total registers                              ; 40    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 8     ;
 ; Number of registers using Asynchronous Clear ; 8     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 58    ;
+; Number of registers using Clock Enable       ; 8     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+--------------------------------------------------+
-; Inverted Register Statistics                     ;
-+----------------------------------------+---------+
-; Inverted Register                      ; Fan out ;
-+----------------------------------------+---------+
-; keymodule:inst3|num[4]                 ; 1       ;
-; keymodule:inst3|count_num[0]           ; 4       ;
-; Total number of inverted registers = 2 ;         ;
-+----------------------------------------+---------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                    ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output          ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
-; 3:1                ; 31 bits   ; 62 LEs        ; 31 LEs               ; 31 LEs                 ; Yes        ; |exp7|keymodule:inst3|count_num[27] ;
-; 8:1                ; 4 bits    ; 20 LEs        ; 16 LEs               ; 4 LEs                  ; Yes        ; |exp7|segment_displays:inst2|num[2] ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |exp7|keymodule:inst3|out[1]        ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |exp7|pc_function:inst1|PC[0]       ;
-; 257:1              ; 4 bits    ; 684 LEs       ; 48 LEs               ; 636 LEs                ; No         ; |exp7|keymodule:inst3|num           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------+
+; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |exp7|pc_function:inst1|PC[7] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------+
@@ -327,7 +307,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:02     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -337,7 +317,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Full Version
-    Info: Processing started: Sun May 21 16:56:33 2023
+    Info: Processing started: Tue May 23 10:33:32 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off exp7 -c exp7
 Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
 Info (12021): Found 1 design units, including 1 entities, in source file exp7.bdf
@@ -352,8 +332,10 @@ Info (12021): Found 1 design units, including 1 entities, in source file output_
     Info (12023): Found entity 1: keymodule
 Info (12127): Elaborating entity "exp7" for the top level hierarchy
 Warning (275006): Can't find a definition for parameter LPM_FILE -- assuming mem.mif was intended to be a quoted string
-Info (12128): Elaborating entity "segment_displays" for hierarchy "segment_displays:inst2"
-Warning (10230): Verilog HDL assignment warning at segment_displays.v(9): truncated value with size 32 to match size of target (3)
+Warning (275089): Not all bits in bus "N[31..0]" are used
+Warning (275080): Converted elements in bus name "N" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "N[31..16]" to "N31..16"
+    Warning (275081): Converted element name(s) from "N[7..0]" to "N7..0"
 Info (12128): Elaborating entity "LPM_ROM" for hierarchy "LPM_ROM:inst"
 Info (12130): Elaborated megafunction instantiation "LPM_ROM:inst"
 Info (12133): Instantiated megafunction "LPM_ROM:inst" with the following parameter:
@@ -374,8 +356,6 @@ Info (12128): Elaborating entity "pc_function" for hierarchy "pc_function:inst1"
 Warning (10230): Verilog HDL assignment warning at pc_function.v(16): truncated value with size 32 to match size of target (8)
 Warning (10230): Verilog HDL assignment warning at pc_function.v(20): truncated value with size 32 to match size of target (8)
 Info (12128): Elaborating entity "count_second" for hierarchy "pc_function:inst1|count_second:cs"
-Info (12128): Elaborating entity "keymodule" for hierarchy "keymodule:inst3"
-Warning (10230): Verilog HDL assignment warning at keymodule.v(22): truncated value with size 16 to match size of target (8)
 Warning (13044): Always-enabled tri-state buffer(s) removed
     Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[15]" to the node "out_num[15]" into a wire
     Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[14]" to the node "out_num[14]" into a wire
@@ -393,38 +373,20 @@ Warning (13044): Always-enabled tri-state buffer(s) removed
     Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[2]" to the node "out_num[2]" into a wire
     Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[1]" to the node "out_num[1]" into a wire
     Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[0]" to the node "out_num[0]" into a wire
-    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[15]" to the node "segment_displays:inst2|Mux0" into a wire
-    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[14]" to the node "segment_displays:inst2|Mux1" into a wire
-    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[13]" to the node "segment_displays:inst2|Mux2" into a wire
-    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[12]" to the node "segment_displays:inst2|Mux3" into a wire
-    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[11]" to the node "segment_displays:inst2|num[3]" into a wire
-    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[10]" to the node "segment_displays:inst2|num[2]" into a wire
-    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[9]" to the node "segment_displays:inst2|num[1]" into a wire
-    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[8]" to the node "segment_displays:inst2|num[0]" into a wire
-    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[7]" to the node "segment_displays:inst2|num[3]" into a wire
-    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[6]" to the node "segment_displays:inst2|num[2]" into a wire
-    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[5]" to the node "segment_displays:inst2|num[1]" into a wire
-    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[4]" to the node "segment_displays:inst2|num[0]" into a wire
-    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[3]" to the node "segment_displays:inst2|Mux0" into a wire
-    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[2]" to the node "segment_displays:inst2|Mux1" into a wire
-    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[1]" to the node "segment_displays:inst2|Mux2" into a wire
-    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[0]" to the node "segment_displays:inst2|Mux3" into a wire
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "codeout[7]" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
 Info (144001): Generated suppressed messages file C:/Computer_Organization/exp7/output_files/exp7.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 274 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 9 input pins
-    Info (21059): Implemented 39 output pins
-    Info (21061): Implemented 210 logic cells
+Info (21057): Implemented 104 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 12 input pins
+    Info (21059): Implemented 24 output pins
+    Info (21061): Implemented 52 logic cells
     Info (21064): Implemented 16 RAM segments
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 40 warnings
-    Info: Peak virtual memory: 4673 megabytes
-    Info: Processing ended: Sun May 21 16:56:38 2023
-    Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:03
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 24 warnings
+    Info: Peak virtual memory: 4658 megabytes
+    Info: Processing ended: Tue May 23 10:33:34 2023
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
 
 
 +------------------------------------------+

@@ -30,5 +30,5 @@
 # Loading work.exp7_vlg_check_tst
 # Loading altera_ver.PRIM_GDFF_LOW
 # Simulation passed !
-# ** Note: $finish    : Waveform.vwf.vt(573)
+# ** Note: $finish    : Waveform.vwf.vt(575)
 #    Time: 1 us  Iteration: 0  Instance: /exp7_vlg_vec_tst/tb_out
